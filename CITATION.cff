@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this map, please cite it as below."
+title: "The ESF Rosetta Stone Map: An Interdisciplinary Evidence Architecture for the Evolutionary Stress Framework"
+authors:
+  - family-names: Hogenkamp
+    given-names: Lori
+    orcid: "https://orcid.org/0009-0001-8211-3847"
+    affiliation: "Center for Adaptive Stress, Cincinnati, Ohio, USA"
+version: 1.0.0
+date-released: "2026-10-14"
+license: CC-BY-4.0
+repository-code: "https://github.com/lorihogenkamp-ops/esf-rosetta-map"
+url: "https://lorihogenkamp-ops.github.io/esf-rosetta-map/"
+doi: 10.5281/zenodo.23422797
+keywords:
+  - Evolutionary Stress Framework
+  - neurodiversity
+  - allostasis
+  - regulatory architecture
+  - evidence map
+  - complexity science
+abstract: "An interactive evidence map for the Evolutionary Stress Framework (ESF): 50 sources organized across 6 evidence layers, mapped to 14 ESF claims and 13 cross-cutting tags, showing how findings from stress physiology, predictive processing, network medicine, developmental science, ecology, and neurodiversity scholarship relate to the framework's core claims."
