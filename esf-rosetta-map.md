@@ -1,6 +1,6 @@
 # The ESF Rosetta Stone Map: An Interdisciplinary Evidence Architecture for the Evolutionary Stress Framework
 
-Version 2.0.0 · released 2026-10-26 · correction and canon alignment · Lori Hogenkamp, Center for Adaptive Stress · CC BY 4.0 · concept DOI 10.5281/zenodo.23422797
+Version 2.0.0 · released 2026-10-26 · correction and canon alignment · Lori Hogenkamp, Center for Adaptive Stress · CC BY 4.0 · version DOI 10.5281/zenodo.23738421 · concept DOI 10.5281/zenodo.23422796
 
 Reading copy generated from the data block of `index.html`. Public Claim text is verbatim from the 14 Core Claims v1.0 (Zenodo 10.5281/zenodo.21937705). Source annotations are the March 2026 originals unless marked revised. All typed links are PROPOSED; none is approved, and only approved links count.
 

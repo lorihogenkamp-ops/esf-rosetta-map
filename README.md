@@ -2,7 +2,7 @@
 
 **An interdisciplinary evidence architecture for the Evolutionary Stress Framework (ESF)**
 Lori Hogenkamp · Center for Adaptive Stress · Version 2.0.0 · 2026-10-26 · CC BY 4.0
-Live map: https://lorihogenkamp-ops.github.io/esf-rosetta-map/ · Zenodo: https://doi.org/10.5281/zenodo.23422797
+Live map: https://lorihogenkamp-ops.github.io/esf-rosetta-map/ · Zenodo: https://doi.org/10.5281/zenodo.23738421 (this version) · https://doi.org/10.5281/zenodo.23422796 (all versions)
 
 > **Version 2.0.0 is a correction and canon-alignment release.** If you downloaded or cited version 1.0 (16 Oct 2026), please read [ERRATA.md](ERRATA.md): 14 of the 50 v1.0 citations were wrong in some element and four annotations overstated their sources. Version 1.0 remains on Zenodo unchanged as the historical baseline.
 
@@ -53,9 +53,9 @@ Each source carries an `audit` block: `doi_identity` (confirmed), `metadata` (ma
 
 ## Citing
 
-Hogenkamp, L. (2026). *The ESF Rosetta Stone Map: An Interdisciplinary Evidence Architecture for the Evolutionary Stress Framework* (Version 2.0.0) [Data set]. Center for Adaptive Stress. Zenodo. https://doi.org/10.5281/zenodo.23422797
+Hogenkamp, L. (2026). *The ESF Rosetta Stone Map: An Interdisciplinary Evidence Architecture for the Evolutionary Stress Framework* (Version 2.0.0) [Data set]. Center for Adaptive Stress. Zenodo. https://doi.org/10.5281/zenodo.23738421
 
-See `CITATION.cff`. Please cite the version you used; the concept DOI resolves to the latest version.
+See `CITATION.cff`. Please cite the version you used. Version DOI for v2.0.0: 10.5281/zenodo.23738421. Concept DOI (always the latest version): 10.5281/zenodo.23422796. Version 1.0: 10.5281/zenodo.23422797.
 
 ## Related records
 

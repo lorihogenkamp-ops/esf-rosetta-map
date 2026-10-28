@@ -2,6 +2,8 @@
 
 ## v2.0.0 -- 2026-10-26 -- correction and canon alignment
 
+Zenodo version DOI: 10.5281/zenodo.23738421 · concept DOI: 10.5281/zenodo.23422796
+
 ### Corrected
 
 - 14 of 50 citations corrected against Crossref (see ERRATA.md): Frye et al. 2024 (biomarkers), Smith et al. 2023, Loureiro et al. 2024, Itoi et al. 2024, Mahony & O'Ryan 2022, Ward et al. 2023, O'Nions et al. 2024, Nijhof et al. 2025 (replaces the Sosenko et al. 2024 preprint citation), Miot et al. 2023, Botha et al. 2024, Raymaker et al. 2020, Mantzalas et al. 2022, Scheeren et al. 2025, Taylor et al. 2022.

@@ -10,4 +10,4 @@
 - Evidence Layers 1-6 renamed Evidence Domains E1-E6
 - New: Topics view, Errata panel, audit trail in the data file, machine-readable export and reading copy regenerated
 
-Full list: CHANGELOG.md. Zenodo: https://doi.org/10.5281/zenodo.23422797
+Full list: CHANGELOG.md · Errata: ERRATA.md · Zenodo: https://doi.org/10.5281/zenodo.23738421 (this version) · https://doi.org/10.5281/zenodo.23422796 (all versions)

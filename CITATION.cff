@@ -9,9 +9,13 @@ authors:
     given-names: Lori
     orcid: "https://orcid.org/0009-0001-8211-3847"
     affiliation: "Center for Adaptive Stress, Cincinnati, Ohio"
+doi: "10.5281/zenodo.23738421"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.23422797"
+    value: "10.5281/zenodo.23738421"
+    description: "Version DOI for v2.0.0"
+  - type: doi
+    value: "10.5281/zenodo.23422796"
     description: "Concept DOI (resolves to the latest version on Zenodo)"
 repository-code: "https://github.com/lorihogenkamp-ops/esf-rosetta-map"
 url: "https://lorihogenkamp-ops.github.io/esf-rosetta-map/"
