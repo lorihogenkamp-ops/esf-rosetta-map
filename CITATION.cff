@@ -1,22 +1,43 @@
 cff-version: 1.2.0
-message: "If you use this map, please cite it as below."
+message: "If you use this map, please cite it as below. Version 2.0.0 corrects the citation record of version 1.0 (see ERRATA.md)."
+type: dataset
 title: "The ESF Rosetta Stone Map: An Interdisciplinary Evidence Architecture for the Evolutionary Stress Framework"
+version: "2.0.0"
+date-released: "2026-10-26"
 authors:
   - family-names: Hogenkamp
     given-names: Lori
     orcid: "https://orcid.org/0009-0001-8211-3847"
-    affiliation: "Center for Adaptive Stress, Cincinnati, Ohio, USA"
-version: 1.0.0
-date-released: "2026-10-14"
-license: CC-BY-4.0
+    affiliation: "Center for Adaptive Stress, Cincinnati, Ohio"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23422797"
+    description: "Concept DOI (resolves to the latest version on Zenodo)"
 repository-code: "https://github.com/lorihogenkamp-ops/esf-rosetta-map"
 url: "https://lorihogenkamp-ops.github.io/esf-rosetta-map/"
-doi: 10.5281/zenodo.23422797
+license: CC-BY-4.0
+abstract: >-
+  An interactive evidence map for the Evolutionary Stress Framework (ESF): 57 annotated sources
+  across six evidence domains, linked by typed relations (supports, refines, constrains, challenges,
+  background, develops) to the 14 Public Claims of the ESF Field Guide v1.0. Version 2.0.0 is a
+  correction and canon-alignment release: 14 of the 50 v1.0 citations are corrected against Crossref,
+  the claims are re-based on the published canon, the March 2026 map claims are kept as topics with
+  their history, and every source-claim link is re-typed and marked proposed pending the author's review.
 keywords:
   - Evolutionary Stress Framework
-  - neurodiversity
   - allostasis
-  - regulatory architecture
-  - evidence map
+  - regulatory bandwidth
+  - neurodiversity
   - complexity science
-abstract: "An interactive evidence map for the Evolutionary Stress Framework (ESF): 50 sources organized across 6 evidence layers, mapped to 14 ESF claims and 13 cross-cutting tags, showing how findings from stress physiology, predictive processing, network medicine, developmental science, ecology, and neurodiversity scholarship relate to the framework's core claims."
+  - evidence map
+  - stress physiology
+  - interoception
+  - network medicine
+references:
+  - type: report
+    title: "The Evolutionary Stress Framework: A Field Guide (v1.0)"
+    authors:
+      - family-names: Hogenkamp
+        given-names: Lori
+    year: 2026
+    doi: "10.5281/zenodo.21937705"
