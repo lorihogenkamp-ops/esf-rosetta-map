@@ -1,5 +1,7 @@
 # The ESF Rosetta Stone Map: An Interdisciplinary Evidence Architecture for the Evolutionary Stress Framework
 
+> Unreleased proposed correction, 2026-10-31. Version/DOI below identify the archived baseline. Jablonka annotation remains flagged pending author review.
+
 Version 2.0.0 · released 2026-10-26 · correction and canon alignment · Lori Hogenkamp, Center for Adaptive Stress · CC BY 4.0 · version DOI 10.5281/zenodo.23738421 · concept DOI 10.5281/zenodo.23422796
 
 Reading copy generated from the data block of `index.html`. Public Claim text is verbatim from the 14 Core Claims v1.0 (Zenodo 10.5281/zenodo.21937705). Source annotations are the March 2026 originals unless marked revised. All typed links are PROPOSED; none is approved, and only approved links count.
@@ -1580,17 +1582,17 @@ Jablonka, Eva, and Marion J. Lamb. 2007. Precis of Evolution in Four Dimensions.
 DOI: https://doi.org/10.1017/s0140525x07002221  
 Evidence type: foundational theory · Tags: EVO, EPI, DEV
 
-**What it argues.** Evolution operates in four dimensions: genetic, epigenetic, behavioral, and symbolic. Non-genetic inheritance is a fundamental evolutionary mechanism, not an exception.
+**What it argues.** Jablonka and Lamb argue that genetic, epigenetic, behavioral, and symbolic inheritance can supply heritable variation on which natural selection acts. They emphasize interactions among these systems and the developmental production of some transmitted variation.
 
-**Why it matters for ESF.** Expands the ESF evolutionary framework beyond gene-centric models -- epigenetic and behavioral transmission are core to how stress signatures propagate and how diversity is maintained.
+**Why it matters for ESF.** Central intellectual foundation for ESF's consideration of multiple routes by which developmental conditions can be carried forward or reconstructed. Applying this account to regulatory calibration or neurodevelopmental diversity is ESF synthesis, not a mechanism demonstrated by this article.
 
-**What the annotation takes it to support.** Evolutionary framework must be 4-dimensional to account for neurodevelopmental diversity · Epigenetic and behavioral inheritance are legitimate evolutionary mechanisms
+**What the annotation takes it to support.** The authors' theoretical argument for considering four interacting inheritance systems in evolutionary explanation. · Intellectual lineage for ESF's inheritance questions; no independent validation of ESF bio-neurotypes, emergent neurotypes, or cooperative neurodiversity.
 
-**Limits.** The symbolic/cultural dimension is underdeveloped relative to the biological dimensions in most applications.
+**Limits.** A theoretical synthesis drawing on diverse examples, not an ESF-specific empirical test. Within-lifetime developmental persistence, cellular memory, parental effects, behavioral or cultural transmission, and germline transmission are distinct. This article does not establish human transgenerational inheritance of stress signatures. Such a claim requires independent, route-specific evidence beyond directly exposed generations, with genetic, shared-environment, and recurrent-exposure alternatives addressed.
 
-**What this makes possible.** Cite in Paper 1 theoretical section. Core to ESF's complexity evolution rather than selection-only framing.
+**What this makes possible.** Use prominently as intellectual foundation. Specify organism, exposure, phenotype, transmission route, and generations for each empirical application; test ESF neurotype and cooperative-benefit proposals independently. Keep both claim links as proposed background pending author review.
 
-*Audit note:* Unannotated, yet carries the statement that a four-dimensional evolutionary framework is required to account for neurodevelopmental diversity. Priority annotation: separate the four inheritance systems (genetic, epigenetic, behavioural, symbolic) from ESF's application; separate within-lifetime developmental effects from inter- and transgenerational transmission. Intellectual lineage, not proof of a neurodevelopmental inheritance mechanism (Constitution Article III). CARD PROMINENCE: central intellectual foundation (four inheritance systems; developmental production and transmission of variation) -- full annotation required; the 'background' relation on its links is an edge role, not a verdict on importance.
+*Audit note:* Proposed correction after primary-source review (2026-10-31): theoretical lineage separated from ESF applications; developmental persistence separated from intergenerational effects and transgenerational germline transmission. Flag retained pending author review; annotated remains false. Both background relationships and all historical links retain their existing statuses. Central intellectual importance is unchanged. See reviews/jablonka-2007.md; v2.0.0 wording preserved in annotation_history.
 
 **Typed links (all proposed, none approved):** background PC9 -- central intellectual lineage: multiple interacting inheritance systems and developmental conditions contributing to transmitted variation; background SP -- central intellectual lineage for population-level reasoning about variation
 
