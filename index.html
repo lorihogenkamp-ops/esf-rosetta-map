@@ -102,11 +102,11 @@ function AboutPanel(p){
         e('div',{style:{fontFamily:MONO,fontSize:9,letterSpacing:'0.12em',color:'#6e7681',textTransform:'uppercase',marginBottom:2}},'Center for Adaptive Stress'),
         e('div',{style:{fontSize:17,fontWeight:600,color:'#e6edf3'}},'ESF Rosetta Stone Map · v'+META.version))),
     e('p',{style:{fontSize:15,lineHeight:1.7,color:'#c9d1d9',marginBottom:14}},'An evidence map for the Evolutionary Stress Framework (ESF): a library of sources annotated for what they argue, why they matter for the framework, what their limits are, and how each connects to the 14 Public Claims of the published ESF canon.'),
-    e('p',{style:{fontSize:14,lineHeight:1.7,color:'#c9d1d9',marginBottom:14}},META.summary),
-    box('Three views',[
+    e('p',{style:{fontSize:14,lineHeight:1.7,color:'#c9d1d9',marginBottom:14}},'Browse current sources by evidence domain and tag, or explore the Public Claims and their source links. Earlier wording and release changes are available under Version history & corrections.'),
+    box('Browse the map',[
       'Sources -- '+SOURCES.length+' sources across 6 evidence domains (E1-E6), filter by tag; '+annotated+' fully annotated, '+esfCards+' ESF publication cards',
       'Claims -- the 14 Public Claims of the ESF Field Guide v1.0, each with its evidence-status label, boundary, published anchors and typed source links',
-      'Topics -- the 14 March 2026 map claims, kept as navigation and history (two retired, five with wording superseded)']),
+      'Version history & corrections -- release changes, correction records and the earlier topics (two retired, five with wording superseded)']),
     box('How links are counted',[
       'Each source-claim link has a relation (supports, refines, constrains, challenges, background, develops), a scope, and a review status.',
       'Only APPROVED links count toward a claim, per relation. In v'+META.version+' every link is PROPOSED and no count is claimed: the review is in progress.',
@@ -116,36 +116,53 @@ function AboutPanel(p){
       'Claims: '+META.canon.claims+' (Zenodo record '+META.canon.record+')',
       'Evidence domains and status labels: '+META.canon.constitution]),
     e('div',{style:{fontFamily:MONO,fontSize:10,color:'#6e7681',marginBottom:14,lineHeight:1.8}},
-      'Version '+META.version+' -- released '+META.released+' -- '+META.release_type,e('br'),
+      'Research data v'+META.version+' -- released '+META.released+'; interface updated 3 November 2026',e('br'),
       'Version DOI '+(META.doi_version||'')+' -- concept DOI '+META.concept_doi+' (all versions) -- v1.0 baseline deposited 16 Oct 2026, unchanged -- '+META.license),
     e('div',{style:{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center'}},
+      e('button',{onClick:p.onHistory,className:'hdrbtn'},'Version history & corrections'),
       e('a',{href:doiUrl(META.concept_doi),target:'_blank',rel:'noopener',className:'linkbtn',style:{color:'#4FC3F7',borderColor:'rgba(79,195,247,.3)',background:'rgba(79,195,247,.06)'}},'Zenodo record'),
       e('a',{href:META.repository,target:'_blank',rel:'noopener',className:'linkbtn',style:{color:'#A5D6A7',borderColor:'rgba(165,214,167,.3)',background:'rgba(165,214,167,.06)'}},'GitHub'),
       e('a',{href:doiUrl(META.canon.record),target:'_blank',rel:'noopener',className:'linkbtn',style:{color:'#CE93D8',borderColor:'rgba(206,147,216,.3)',background:'rgba(206,147,216,.06)'}},'ESF Field Guide'),
       e('a',{href:'https://ndstress.org',target:'_blank',rel:'noopener',className:'linkbtn',style:{color:'#8b949e',borderColor:'#30363d'}},'ndstress.org')));
 }
 
-function ErrataPanel(p){
+function HistoryPanel(p){
   var cites=ERRATA.items.filter(function(x){return x.kind==='citation';});
   var anns=ERRATA.items.filter(function(x){return x.kind==='annotation';});
   var structs=ERRATA.items.filter(function(x){return x.kind==='structure';});
   function row(label,text,color){return e('div',{style:{display:'flex',gap:10,marginBottom:4}},e('span',{style:{fontFamily:MONO,fontSize:9,color:color||'#6e7681',width:44,flexShrink:0,paddingTop:3,textTransform:'uppercase'}},label),e('span',{style:{fontSize:12.5,lineHeight:1.55,color:'#c9d1d9'}},text));}
   return e(Modal,{onClose:p.onClose,wide:true},
-    e('div',{style:{fontFamily:MONO,fontSize:9,letterSpacing:'0.12em',color:'#f0883e',textTransform:'uppercase',marginBottom:4}},'Errata -- v1.0 (16 Oct 2026) to v'+META.version+' ('+META.released+')'),
-    e('div',{style:{fontSize:16,fontWeight:600,color:'#e6edf3',marginBottom:10}},'If you downloaded or cited version 1.0'),
-    e('p',{style:{fontSize:13.5,lineHeight:1.65,color:'#c9d1d9',marginBottom:16}},cites.length+' of the 50 v1.0 citations were wrong in some element (six gave the wrong journal; others a wrong volume, issue, article number or title; one cited a non-existent journal record for a preprint). Every v1.0 citation was checked against the Crossref record for its DOI. The corrected reference list below is also in the repository as ERRATA.md.'),
-    e(Label,{text:'Citation corrections ('+cites.length+')',color:'#f0883e'}),
-    cites.map(function(x,i){return e('div',{key:i,style:{borderLeft:'2px solid #f0883e',padding:'6px 12px',marginBottom:10,background:'#0d1117',borderRadius:4}},
-      e('div',{style:{fontSize:13,fontWeight:600,color:'#e6edf3',marginBottom:4}},x.citation),
-      row('v1.0',x.v1,'#f85149'),row('v2.0',x.v2,'#3fb950'),
-      x.doi&&row('doi',e('a',{href:doiUrl(x.doi),target:'_blank',rel:'noopener',style:{color:'#4FC3F7'}},x.doi)),
-      x.note&&row('note',x.note));}),
-    e(Label,{text:'Annotation revisions ('+anns.length+')',color:'#d2a679'}),
-    anns.map(function(x,i){return e('div',{key:i,style:{borderLeft:'2px solid #d2a679',padding:'6px 12px',marginBottom:10,background:'#0d1117',borderRadius:4}},
-      e('div',{style:{fontSize:13,fontWeight:600,color:'#e6edf3',marginBottom:4}},x.citation),
-      row('retired',x.retired,'#f85149'),row('now',x.replacement,'#3fb950'));}),
-    e(Label,{text:'Structural changes ('+structs.length+')',color:'#4FC3F7'}),
-    structs.map(function(x,i){return e('div',{key:i,style:{fontSize:13,lineHeight:1.6,color:'#c9d1d9',marginBottom:8,paddingLeft:12,borderLeft:'2px solid #30363d'}},x.change);}));
+    e('h2',{style:{fontSize:18,color:'#e6edf3',marginBottom:10}},'Version history & corrections'),
+    e('p',{style:{fontSize:13.5,lineHeight:1.65,color:'#c9d1d9',marginBottom:12}},'Research data: v'+META.version+' ('+META.released+'). Interface updated 3 November 2026. Earlier wording and corrections remain available here; the research data and evidence-review statuses are unchanged.'),
+    e('div',{style:{display:'flex',gap:8,flexWrap:'wrap',marginBottom:18}},
+      e('a',{href:META.repository+'/blob/main/CHANGELOG.md',target:'_blank',rel:'noopener',className:'hdrbtn'},'Changelog'),
+      e('a',{href:META.repository+'/blob/main/ERRATA.md',target:'_blank',rel:'noopener',className:'hdrbtn'},'Correction record'),
+      e('a',{href:doiUrl(META.doi_version||META.concept_doi),target:'_blank',rel:'noopener',className:'hdrbtn'},'Archived v'+META.version+' data'),
+      e('a',{href:doiUrl(META.concept_doi),target:'_blank',rel:'noopener',className:'hdrbtn'},'All archived versions')),
+    e('div',{className:'notebox'},
+      e('div',{style:{fontSize:14,color:'#e6edf3',marginBottom:6}},'Earlier topics (v1.0)'),
+      e('p',{style:{fontSize:13,lineHeight:1.6,color:'#8b949e',marginBottom:10}},'The March 2026 topic wording and source assignments are preserved as history, with links to the current Public Claims. They are not a second current claim set.'),
+      e('button',{onClick:p.onTopics,className:'hdrbtn'},'Browse earlier topics (v1.0)')),
+    e('details',{className:'notebox'},
+      e('summary',{style:{fontSize:13.5,color:'#c9d1d9',cursor:'pointer'}},'Release summary -- v'+META.version),
+      e('p',{style:{fontSize:13,lineHeight:1.65,color:'#8b949e',marginTop:10}},META.summary)),
+    e('details',{className:'notebox'},
+      e('summary',{style:{fontSize:13.5,color:'#c9d1d9',cursor:'pointer'}},'Corrections from v1.0 to v'+META.version),
+      e('div',{style:{marginTop:14}},
+        e('div',{style:{fontSize:16,fontWeight:600,color:'#e6edf3',marginBottom:10}},'If you downloaded or cited version 1.0'),
+        e('p',{style:{fontSize:13.5,lineHeight:1.65,color:'#c9d1d9',marginBottom:16}},cites.length+' of the 50 v1.0 citations were wrong in some element (six gave the wrong journal; others a wrong volume, issue, article number or title; one cited a non-existent journal record for a preprint). Every v1.0 citation was checked against the Crossref record for its DOI. The corrected reference list below is also in the repository as ERRATA.md.'),
+        e(Label,{text:'Citation corrections ('+cites.length+')',color:'#f0883e'}),
+        cites.map(function(x,i){return e('div',{key:i,style:{borderLeft:'2px solid #f0883e',padding:'6px 12px',marginBottom:10,background:'#0d1117',borderRadius:4}},
+          e('div',{style:{fontSize:13,fontWeight:600,color:'#e6edf3',marginBottom:4}},x.citation),
+          row('v1.0',x.v1,'#f85149'),row('v2.0',x.v2,'#3fb950'),
+          x.doi&&row('doi',e('a',{href:doiUrl(x.doi),target:'_blank',rel:'noopener',style:{color:'#4FC3F7'}},x.doi)),
+          x.note&&row('note',x.note));}),
+        e(Label,{text:'Annotation revisions ('+anns.length+')',color:'#d2a679'}),
+        anns.map(function(x,i){return e('div',{key:i,style:{borderLeft:'2px solid #d2a679',padding:'6px 12px',marginBottom:10,background:'#0d1117',borderRadius:4}},
+          e('div',{style:{fontSize:13,fontWeight:600,color:'#e6edf3',marginBottom:4}},x.citation),
+          row('retired',x.retired,'#f85149'),row('now',x.replacement,'#3fb950'));}),
+        e(Label,{text:'Structural changes ('+structs.length+')',color:'#4FC3F7'}),
+        structs.map(function(x,i){return e('div',{key:i,style:{fontSize:13,lineHeight:1.6,color:'#c9d1d9',marginBottom:8,paddingLeft:12,borderLeft:'2px solid #30363d'}},x.change);})))); 
 }
 
 function App(){
@@ -159,7 +176,6 @@ function App(){
   var _s8=useState(false),     showAbout=_s8[0],setShowAbout=_s8[1];
   var _s9=useState(false),     showErrata=_s9[0],setShowErrata=_s9[1];
   var _s10=useState(null),     selTopic=_s10[0],setSelTopic=_s10[1];
-  var _s11=useState(true),     showNotice=_s11[0],setShowNotice=_s11[1];
 
   var curLayer=LAYER_MAP[selLayer];
 
@@ -218,7 +234,7 @@ function App(){
     e('div',{style:{fontFamily:MONO,fontSize:8.5,color:'#6e7681',padding:'8px 4px 0',lineHeight:1.6}},'Counts: approved / proposed. Only approved links count; none is approved yet.'));
 
   var sidebarTopics=e('div',{style:{flex:1,overflowY:'auto'}},
-    e('div',{style:{fontFamily:MONO,fontSize:9,letterSpacing:'0.1em',color:'#6e7681',textTransform:'uppercase',padding:'0 4px',marginBottom:9}},'v1.0 map claims · topics'),
+    e('div',{style:{fontFamily:MONO,fontSize:9,letterSpacing:'0.1em',color:'#6e7681',textTransform:'uppercase',padding:'0 4px',marginBottom:9}},'Earlier topics · v1.0 history'),
     TOPICS.map(function(t){
       var active=selTopic&&selTopic.id===t.id; var st=TOPIC_STATUS[t.topic_status]||TOPIC_STATUS.active; var layer=LAYER_MAP[t.layer_home]; var col=layer?layer.color:'#8b949e';
       var n=SOURCES.filter(function(s){return (s.legacy_links||[]).some(function(l){return l.v1_topic===t.id;});}).length;
@@ -233,7 +249,7 @@ function App(){
   var sidebarBottom=e('div',{style:{marginTop:'auto',paddingTop:14,borderTop:'1px solid #21262d',padding:'14px 4px 0'}},
     e('div',{style:{fontFamily:MONO,fontSize:9,letterSpacing:'0.06em',color:'#6e7681',marginBottom:8,lineHeight:1.7}},SOURCES.length+' sources -- '+PC.length+' public claims',e('br'),'v'+META.version+' -- '+META.released),
     e('button',{onClick:function(){setShowAbout(true);},className:'sbbtn',style:{color:'#4FC3F7',borderColor:'rgba(79,195,247,.2)',background:'rgba(79,195,247,.06)'}},'About this map'),
-    e('button',{onClick:function(){setShowErrata(true);},className:'sbbtn',style:{color:'#f0883e',borderColor:'rgba(240,136,62,.25)',background:'rgba(240,136,62,.06)',marginTop:5}},'Errata (v1.0 to v2.0)'),
+    e('button',{onClick:function(){setShowErrata(true);},className:'sbbtn',style:{color:'#8b949e',borderColor:'#30363d',background:'transparent',marginTop:5}},'Version history & corrections'),
     e('div',{style:{marginTop:8,fontFamily:MONO,fontSize:9,color:'#6e7681',lineHeight:1.8}},
       e('a',{href:'https://ndstress.org',target:'_blank',rel:'noopener',style:{color:'#4FC3F7',display:'block'}},'ndstress.org'),
       e('a',{href:doiUrl(META.doi_version||META.concept_doi),target:'_blank',rel:'noopener',style:{color:'#A5D6A7',display:'block'}},'doi '+(META.doi_version||META.concept_doi))));
@@ -244,7 +260,6 @@ function App(){
   // ---------- SOURCE CARD
   function SourceCard(src, activeId, onSelect, accentColor, link, legacy){
     var active=activeId&&activeId===src.id; var lay=LAYER_MAP[src.layer];
-    var corrected=src.audit&&src.audit.metadata==='corrected'; var revised=src.audit&&src.audit.annotation==='revised';
     return e('div',{key:src.id+(link?'-'+link.claim+link.relation:''),className:'scard',onClick:function(){onSelect(src);},style:{borderColor:active?accentColor:'#21262d',background:active?'rgba('+rgb(accentColor)+',.06)':'#161b22'}},
       e('div',{style:{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:8}},
         e('div',{style:{fontSize:14,fontWeight:600,color:'#e6edf3',lineHeight:1.3}},src.citation),
@@ -255,9 +270,7 @@ function App(){
       link&&e('div',{style:{marginTop:6,display:'flex',gap:6,alignItems:'flex-start'}},e(RelBadge,{rel:link.relation}),e('span',{style:{fontSize:12,color:'#c9d1d9',lineHeight:1.45}},link.scope),e('span',{className:'badge',style:{color:'#6e7681',border:'1px dashed #30363d',marginLeft:'auto'}},link.review_status)),
       legacy&&e('div',{style:{marginTop:6,fontFamily:MONO,fontSize:9,color:'#6e7681'}},legacy.review_status),
       e('div',{style:{marginTop:5,display:'flex',flexWrap:'wrap',alignItems:'center'}},
-        src.tags.map(function(tag){var t=TAGS[tag];return e('span',{key:tag,className:'chip',onClick:function(ev){ev.stopPropagation();switchMode('sources');selectLayer(src.layer);toggleTag(tag);},style:{background:'rgba('+rgb(t.color)+',.12)',color:t.color,border:'1px solid rgba('+rgb(t.color)+',.25)'}},tag);}),
-        corrected&&e('span',{className:'chip',style:{color:'#f0883e',border:'1px solid rgba(240,136,62,.4)',background:'rgba(240,136,62,.08)'}},'citation corrected'),
-        revised&&e('span',{className:'chip',style:{color:'#d2a679',border:'1px solid rgba(210,166,121,.4)',background:'rgba(210,166,121,.08)'}},'annotation revised')),
+        src.tags.map(function(tag){var t=TAGS[tag];return e('span',{key:tag,className:'chip',onClick:function(ev){ev.stopPropagation();switchMode('sources');selectLayer(src.layer);toggleTag(tag);},style:{background:'rgba('+rgb(t.color)+',.12)',color:t.color,border:'1px solid rgba('+rgb(t.color)+',.25)'}},tag);})),
       !active&&!link&&src.esf&&e('div',{style:{marginTop:6,fontSize:12,color:'#8b949e',lineHeight:1.5,overflow:'hidden',display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical'}},src.esf));
   }
 
@@ -275,8 +288,9 @@ function App(){
             src.evidence_type&&e('span',{style:{color:'#8b949e'}},'type: '+src.evidence_type),
             src.draft&&e('span',{style:{color:'#d2a679'}},'ESF publication card'))),
         e('button',{className:'cbtn',onClick:onClose},'x')),
-      a.metadata==='corrected'&&e('div',{className:'notebox',style:{borderColor:'rgba(240,136,62,.4)'}},
-        e(Label,{text:'Citation corrected in v2.0',color:'#f0883e'}),
+      a.metadata==='corrected'&&e('details',{key:src.id+'-citation-history',className:'notebox'},
+        e('summary',{style:{fontSize:12.5,color:'#8b949e',cursor:'pointer',marginBottom:6}},'Citation history'),
+        e(Label,{text:'Citation corrected in v2.0',color:'#8b949e'}),
         src.full_v1&&e('div',{style:{fontSize:12,color:'#8b949e',marginBottom:4}},e('span',{style:{fontFamily:MONO,fontSize:9,color:'#f85149',marginRight:6}},'V1.0'),src.full_v1),
         e('div',{style:{fontSize:12,color:'#c9d1d9',lineHeight:1.5}},a.metadata_note)),
       e('div',{style:{display:'flex',flexWrap:'wrap',marginBottom:10}},
@@ -292,8 +306,8 @@ function App(){
               l.rationale&&e('div',{style:{fontSize:11.5,color:'#8b949e',lineHeight:1.45,marginTop:2}},l.rationale)),
             e('span',{className:'badge',style:{color:'#6e7681',border:'1px dashed #30363d'}},l.review_status));}),
         e('div',{style:{fontFamily:MONO,fontSize:9,color:'#6e7681',marginTop:4}},'Proposed links are navigation, not evidence counts. Only approved links are counted.')),
-      legacy.length>0&&e('div',{style:{marginBottom:14}},
-        e(Label,{text:'v1.0 topics (history)',color:'#8b949e'}),
+      legacy.length>0&&e('details',{key:src.id+'-topic-history',style:{marginBottom:14}},
+        e('summary',{style:{fontFamily:MONO,fontSize:10,color:'#8b949e',cursor:'pointer',marginBottom:6}},'Earlier topic assignments (v1.0)'),
         e('div',{style:{display:'flex',flexWrap:'wrap',gap:5}},legacy.map(function(l,i){var t=TOPIC_MAP[l.v1_topic];if(!t)return null;var lay=LAYER_MAP[t.layer_home];var col=lay?lay.color:'#8b949e';var retired=/retired/.test(l.review_status);
           return e('div',{key:i,title:l.review_status+(l.note?' -- '+l.note:''),onClick:function(){openTopic(t);},style:{padding:'3px 9px',borderRadius:4,background:'rgba('+rgb(col)+',.07)',border:'1px '+(retired?'dashed':'solid')+' rgba('+rgb(col)+',.25)',fontSize:12,color:retired?'#8b949e':col,cursor:'pointer',textDecoration:retired?'line-through':'none'}},t.id.toUpperCase()+' '+t.legacy_label);}))),
       src.argues&&e('div',{className:'dsec'},e(Label,{text:'What it argues',color:accentColor}),e('p',{style:{margin:0,fontSize:14,lineHeight:1.65,color:'#c9d1d9'}},src.argues)),
@@ -301,8 +315,12 @@ function App(){
       src.supports&&e('div',{className:'dsec'},e(Label,{text:'What the annotation takes it to support',color:accentColor}),e('ul',{style:{margin:0,paddingLeft:18}},src.supports.map(function(s,i){return e('li',{key:i,style:{fontSize:13,lineHeight:1.6,color:'#c9d1d9',marginBottom:3}},s);}))),
       src.limits&&e('div',{className:'dsec'},e(Label,{text:'Limits / cautions',color:'#f0883e'}),e('p',{style:{margin:0,fontSize:13,lineHeight:1.6,color:'#8b949e'}},src.limits)),
       src.next&&e('div',{className:'dsec'},e(Label,{text:'What this makes possible',color:'#3fb950'}),e('p',{style:{margin:0,fontSize:13,lineHeight:1.6,color:'#c9d1d9'}},src.next)),
-      (a.annotation==='revised'||a.annotation==='flagged')&&e('div',{className:'notebox',style:{borderColor:a.annotation==='revised'?'rgba(210,166,121,.4)':'rgba(240,136,62,.4)'}},
-        e(Label,{text:a.annotation==='revised'?'Annotation revised '+(a.annotation_revised||''):'Annotation flagged for review',color:a.annotation==='revised'?'#d2a679':'#f0883e'}),
+      a.annotation==='revised'&&e('details',{key:src.id+'-annotation-history',className:'notebox'},
+        e('summary',{style:{fontSize:12.5,color:'#8b949e',cursor:'pointer',marginBottom:6}},'Annotation revision history'),
+        e(Label,{text:'Annotation revised '+(a.annotation_revised||''),color:'#d2a679'}),
+        e('div',{style:{fontSize:12,color:'#c9d1d9',lineHeight:1.5}},a.annotation_note)),
+      a.annotation==='flagged'&&e('div',{className:'notebox',style:{borderColor:'rgba(240,136,62,.4)'}},
+        e(Label,{text:'Annotation flagged for review',color:'#f0883e'}),
         e('div',{style:{fontSize:12,color:'#c9d1d9',lineHeight:1.5}},a.annotation_note)),
       a.annotation==='not yet checked'&&!src.draft&&e('div',{style:{fontFamily:MONO,fontSize:9,color:'#6e7681',marginTop:6}},'Annotation text is the March 2026 original; its content check against the paper is queued.'),
       src.draft&&e('div',{style:{fontFamily:MONO,fontSize:9,color:'#6e7681',marginTop:6}},a.annotation_note),
@@ -396,7 +414,7 @@ function App(){
         t.migration_note&&e('p',{style:{margin:'0 0 6px',fontSize:12.5,color:'#d2a679',lineHeight:1.55}},e('span',{style:{fontFamily:MONO,fontSize:9,letterSpacing:'0.08em',marginRight:6}},'MIGRATION'),t.migration_note),
         t.related_public_claims&&e('div',{style:{display:'flex',flexWrap:'wrap',gap:5,marginTop:4}},t.related_public_claims.map(function(r){var c=PC_MAP[r.claim];if(!c)return null;return e(Chip,{key:r.claim,text:claimShort(c)+' -- '+r.scope,color:claimColor(c),size:10.5,onClick:function(){openClaim(c);}});})));})():
       e('div',null,
-        e('h2',{style:{margin:'0 0 4px',fontSize:16,fontWeight:600,color:'#e6edf3'}},'Topics -- the March 2026 map claims, kept as history'),
+        e('h2',{style:{margin:'0 0 4px',fontSize:16,fontWeight:600,color:'#e6edf3'}},'History -- earlier topics (v1.0)'),
         e('p',{style:{margin:0,fontSize:13,color:'#8b949e',fontStyle:'italic',lineHeight:1.6}},'These 14 statements organised v1.0. They are no longer a claim set: the Public Claims are. Each topic keeps its sources as history and points to the Public Claims it was reassessed against. Two are retired as wording (c02, c11); five have wording superseded by the published canon.'))),
     e('div',{style:{display:'flex',flex:1,overflow:'hidden'}},
       selTopic?e('div',{style:{width:selSrc?'42%':'100%',overflowY:'auto',padding:'11px 14px',transition:'width .25s'}},
@@ -417,8 +435,8 @@ function App(){
   // ---------- SHELL
   function tab(id,label,accent){return e('button',{className:'modetab',onClick:function(){switchMode(id);},style:{color:mode===id?'#e6edf3':'#8b949e',background:mode===id?'#21262d':'transparent',borderColor:mode===id?accent:'#30363d'}},label);}
   return e('div',{style:{display:'flex',flexDirection:'column',height:'100vh',overflow:'hidden'}},
-    showAbout&&e(AboutPanel,{onClose:function(){setShowAbout(false);}}),
-    showErrata&&e(ErrataPanel,{onClose:function(){setShowErrata(false);}}),
+    showAbout&&e(AboutPanel,{onClose:function(){setShowAbout(false);},onHistory:function(){setShowAbout(false);setShowErrata(true);}}),
+    showErrata&&e(HistoryPanel,{onClose:function(){setShowErrata(false);},onTopics:function(){setShowErrata(false);switchMode('topics');setSelTopic(null);}}),
     e('div',{style:{padding:'12px 22px 11px',borderBottom:'1px solid #21262d',background:'#161b22',display:'flex',alignItems:'center',justifyContent:'space-between',flexShrink:0}},
       e('div',{style:{display:'flex',alignItems:'center',gap:12}},
         e('div',{style:{width:28,height:28,borderRadius:'50%',background:'#0d1117',border:'1.5px solid #4FC3F7',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}},e('div',{className:'dot-pulse',style:{background:'#4FC3F7',width:6,height:6}})),
@@ -426,19 +444,14 @@ function App(){
           e('div',{style:{fontFamily:MONO,fontSize:9,letterSpacing:'0.12em',color:'#6e7681',textTransform:'uppercase',marginBottom:1}},e('a',{href:'https://ndstress.org',target:'_blank',rel:'noopener',style:{color:'#6e7681'}},'Center for Adaptive Stress'),' -- ndstress.org'),
           e('h1',{style:{margin:0,fontSize:16,fontWeight:600,letterSpacing:'-0.01em',color:'#e6edf3'}},'ESF Rosetta Stone Map ',e('span',{style:{fontFamily:MONO,fontSize:10,color:'#4FC3F7',border:'1px solid rgba(79,195,247,.3)',borderRadius:3,padding:'1px 6px',marginLeft:6,verticalAlign:'middle'}},'v'+META.version)))),
       e('div',{style:{display:'flex',alignItems:'center',gap:10}},
-        e('div',{style:{display:'flex',gap:5,alignItems:'center'}},tab('sources','Sources','#4FC3F7'),tab('claims','Claims','#d2a679'),tab('topics','Topics (v1.0)','#8b949e')),
+        e('div',{style:{display:'flex',gap:5,alignItems:'center'}},tab('sources','Sources','#4FC3F7'),tab('claims','Claims','#d2a679')),
         e('div',{style:{display:'flex',gap:6,alignItems:'center',borderLeft:'1px solid #21262d',paddingLeft:10}},
           LAYERS.map(function(l){return e('div',{key:l.id,title:(l.code||('E'+l.id))+': '+l.shortName,onClick:function(){switchMode('sources');selectLayer(l.id);},style:{width:8,height:8,borderRadius:'50%',background:l.color,cursor:'pointer',opacity:(mode==='sources'&&l.id===selLayer)?1:.3,transition:'all .2s',boxShadow:(mode==='sources'&&l.id===selLayer)?'0 0 10px '+l.color:'none'}});})),
-        e('button',{onClick:function(){setShowErrata(true);},className:'hdrbtn',style:{color:'#f0883e',borderColor:'rgba(240,136,62,.4)'}},'Errata'),
         e('button',{onClick:function(){setShowAbout(true);},className:'hdrbtn'},'About'))),
-    showNotice&&e('div',{style:{padding:'6px 22px',background:'rgba(240,136,62,.08)',borderBottom:'1px solid rgba(240,136,62,.25)',display:'flex',alignItems:'center',gap:12,flexShrink:0}},
-      e('span',{style:{fontFamily:MONO,fontSize:9,letterSpacing:'0.08em',color:'#f0883e',textTransform:'uppercase',flexShrink:0}},'v'+META.version+' · '+META.released),
-      e('span',{style:{fontSize:12.5,color:'#c9d1d9',lineHeight:1.4,flex:1}},'Correction and canon-alignment release: '+ERRATA.citations_corrected+' of 50 v1.0 citations corrected; claims re-based on the published 14 Core Claims; every source-claim link re-typed and shown as proposed, none yet approved. If you downloaded v1.0, see the ',e('a',{href:'#',onClick:function(ev){ev.preventDefault();setShowErrata(true);},style:{color:'#f0883e',textDecoration:'underline'}},'errata'),'.'),
-      e('button',{className:'cbtn',onClick:function(){setShowNotice(false);},style:{padding:'2px 8px'}},'x')),
     e('div',{style:{display:'flex',flex:1,overflow:'hidden'}},sidebar,mode==='sources'?sourcesView:(mode==='claims'?claimsView:topicsView)),
     e('div',{style:{padding:'5px 20px',borderTop:'1px solid #21262d',background:'#161b22',display:'flex',alignItems:'center',justifyContent:'space-between',flexShrink:0}},
-      e('span',{style:{fontFamily:MONO,fontSize:9,color:'#6e7681',letterSpacing:'0.06em'}},'Evolutionary Stress Framework -- Rosetta Stone Map v'+META.version+' ('+META.released+', '+META.release_type+') -- Center for Adaptive Stress 2025-26 -- CC BY 4.0'),
-      e('a',{href:doiUrl(META.doi_version||META.concept_doi),target:'_blank',rel:'noopener',style:{fontFamily:MONO,fontSize:9,color:'#6e7681'}},'doi:'+(META.doi_version||META.concept_doi))));
+      e('span',{style:{fontFamily:MONO,fontSize:9,color:'#6e7681',letterSpacing:'0.06em'}},'Evolutionary Stress Framework -- Rosetta Stone Map -- data v'+META.version+' ('+META.released+') -- Center for Adaptive Stress 2025-26 -- CC BY 4.0'),
+      e('a',{href:doiUrl(META.doi_version||META.concept_doi),target:'_blank',rel:'noopener',style:{fontFamily:MONO,fontSize:9,color:'#6e7681'}},'Dataset DOI: '+(META.doi_version||META.concept_doi))));
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(e(App));

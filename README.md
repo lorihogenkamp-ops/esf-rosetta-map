@@ -12,11 +12,13 @@ The map translates the ESF evidence library into a navigable structure: each sou
 
 Since v2.0 the map's claims are the **14 Public Claims** of *The Evolutionary Stress Framework: A Field Guide* v1.0 (Zenodo [10.5281/zenodo.21937705](https://doi.org/10.5281/zenodo.21937705), 17 Oct 2026), shown verbatim with their evidence-status label (Established foundation · Strong convergent support · ESF synthesis · Active empirical hypothesis · Methodological implication), their boundary sentence, and their published anchors. The ESF Canonical Terminology and Boundary Map (same record) controls vocabulary.
 
-## Three views
+## Browse the map
 
 - **Sources** -- browse 57 sources by evidence domain, filter by tag, open the full annotation. 40 external sources are fully annotated, 9 are stubs queued for annotation, and 7 are ESF publication cards.
 - **Claims** -- the 14 Public Claims plus one supplementary proposition (cooperative neurodiversity). Each shows its typed source links grouped by relation.
-- **Topics (v1.0)** -- the 14 March 2026 map claims, kept as navigation and history. Two are retired as wording (c02, c11); five have wording superseded by the published canon. Each topic points to the Public Claims it was reassessed against and lists the sources that carried it in v1.0.
+- **Version history & corrections** -- available from the sidebar and About panel. This contains the release summary, correction record and **Earlier topics (v1.0)**: the 14 March 2026 map claims, kept as navigation and history. Two are retired as wording (c02, c11); five have wording superseded by the published canon. Each topic points to the Public Claims it was reassessed against and lists the sources that carried it in v1.0.
+
+The live interface was updated on 3 November 2026 to put current Sources and Claims first. Historical correction details and earlier topic assignments are expandable; the data, claim wording, evidence-review statuses and archived releases are unchanged. The version and DOI above identify the v2.0.0 research data.
 
 ## How links work, and how they are counted
 

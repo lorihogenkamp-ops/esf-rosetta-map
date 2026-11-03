@@ -1,5 +1,14 @@
 # Changelog
 
+## Live interface update -- 2026-11-03 (v2.0.0 research data)
+
+- Removed the global correction-release banner from normal map browsing.
+- Sources and Claims remain the primary views. Version history & corrections is accessible from the sidebar and About panel, with links to the changelog, correction record and archived versions.
+- Earlier topics (v1.0) are reached through Version history & corrections rather than a primary Topics tab. Their original wording, status labels and links remain available as history.
+- Corrected source citations display normally. Previous citation wording, annotation revision notes and earlier topic assignments are preserved in expandable history sections; correction badges are no longer repeated on source cards.
+- Current claim boundaries, evidence-status labels, link-review statuses, annotation-review warnings and counting rules remain visible and unchanged.
+- No research data, citations, claims, evidence relationships or review statuses were edited. The embedded data remain byte-for-byte identical to the v2.0.0 baseline. This interface update does not create a new dataset version or change any DOI or archived release.
+
 ## v2.0.0 -- 2026-10-26 -- correction and canon alignment
 
 Zenodo version DOI: 10.5281/zenodo.23738421 · concept DOI: 10.5281/zenodo.23422796
