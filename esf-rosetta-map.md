@@ -173,7 +173,7 @@ Some people may differ not only in settings of a shared regulatory design but in
 - [background, proposed] Belsky & Pluess (2009) -- differential susceptibility as a candidate alternative interpretation of context-dependent outcomes
 - [background, proposed] Frye et al. (2024) -- biomarker meta-analysis -- biomarker heterogeneity motivates investigation; it does not decide whether variation is architectural, parametric, state-related or methodological
 - [background, proposed] Lingampelly et al. (2024) -- early metabolic differences motivate developmental investigation without deciding the architecture-parameter comparison
-- [develops, proposed] Hogenkamp (in press) -- Beyond Parametric Variation -- the architectural-heterogeneity hypothesis as stated in Public Claim 7
+- [develops, proposed] Hogenkamp (manuscript in process) -- Beyond Parametric Variation -- the architectural-heterogeneity hypothesis as stated in Public Claim 7
 
 ### Claim 8 -- Diagnoses generally describe expressed profiles and do not uniquely identify underlying architecture.
 
@@ -223,7 +223,7 @@ Bio-neurotype names regulatory architecture. Calibration is developmental parame
 - [background, proposed] Jablonka & Lamb (2007) -- central intellectual lineage: multiple interacting inheritance systems and developmental conditions contributing to transmitted variation
 - [background, proposed] Lingampelly et al. (2024) -- early metabolic organisation and later expressed profile
 - [background, proposed] Murray, Lesser & Lawson (2005) -- a cognitive style as expressed profile
-- [develops, proposed] Hogenkamp (in press) -- Beyond Parametric Variation -- architecture as prior to calibration
+- [develops, proposed] Hogenkamp (manuscript in process) -- Beyond Parametric Variation -- architecture as prior to calibration
 - [develops, proposed] Hogenkamp, Sanghavi & Natri (2026) -- bio-neurotype and emergent neurotype as terms; not the full three-layer scheme
 
 ### Claim 10 -- Some behaviors and physiological responses function as regulatory strategies before or while becoming costly.
@@ -264,7 +264,7 @@ A regulatory architecture may support high performance in some directions while 
 - [supports, proposed] Murray, Lesser & Lawson (2005) -- monotropic attention as patterned allocation with trade-offs rather than impairment
 - [supports, proposed] Taylor & Vestergaard (2022) -- dyslexia as specialisation in exploration: an efficiency-exploration trade-off
 - [background, proposed] Taylor, Fernandes & Wraight (2022) -- trade-offs between processing styles
-- [develops, proposed] Hogenkamp (in press) -- Beyond Parametric Variation -- robustness-fragility trade-offs across architectures
+- [develops, proposed] Hogenkamp (manuscript in process) -- Beyond Parametric Variation -- robustness-fragility trade-offs across architectures
 
 ### Claim 12 -- Environment is part of coupled regulation and shapes cost, disability and function without explaining everything.
 
@@ -1699,12 +1699,12 @@ Evidence type: foundational theory · Tags: EVO, DEV, METH
 
 **v1.0 topics (history):** C14 (history (reassessed as proposed claim links)); C06 (history (reassessed as proposed claim links))
 
-#### Hogenkamp (in press) -- Beyond Parametric Variation  *(ESF publication card)*
+#### Hogenkamp (manuscript in process) -- Beyond Parametric Variation  *(ESF publication card)*
 
-Hogenkamp, Lori. In press. Beyond Parametric Variation: Neurodevelopmental Diversity as Architectural Heterogeneity in Biological Control Systems. Biological Theory.  
+Hogenkamp, Lori. Manuscript in process. Beyond Parametric Variation: Neurodevelopmental Diversity as Architectural Heterogeneity in Biological Control Systems. Biological Theory.  
 Evidence type: conceptual model · Tags: EVO, NET, DEV, ND, METH
 
-**What it argues.** Proposes (active empirical hypothesis; in press at Biological Theory, accepted October 2026) that neurodevelopmental variation may include architectural heterogeneity -- differences in the structure, coupling, functional form, dimensionality, or timescale organization of the regulatory control system -- and is not exhausted by parametric heterogeneity, differences in the settings of a shared design. Identifies the conserved-architecture assumption in adaptive-calibration and robustness models, reads stress incoherence as architectural mismatch, and sets out empirical signatures that would discriminate the two kinds of variation.
+**What it argues.** Proposes (active empirical hypothesis; manuscript in process at Biological Theory) that neurodevelopmental variation may include architectural heterogeneity -- differences in the structure, coupling, functional form, dimensionality, or timescale organization of the regulatory control system -- and is not exhausted by parametric heterogeneity, differences in the settings of a shared design. Identifies the conserved-architecture assumption in adaptive-calibration and robustness models, reads stress incoherence as architectural mismatch, and sets out empirical signatures that would discriminate the two kinds of variation.
 
 **Why it matters for ESF.** The load-bearing claim of the framework, stated as a testable hypothesis. It is why the map treats heterogeneity as meaningful rather than noise, and why calibration (Layer 3) is never allowed to stand in for architecture. It also carries the cooperative-neurodiversity hypothesis into population-level reasoning in this layer.
 
@@ -1712,7 +1712,7 @@ Evidence type: conceptual model · Tags: EVO, NET, DEV, ND, METH
 
 **Limits.** Active empirical hypothesis: existing evidence motivates the distinction but does not yet discriminate architecture from flexible parametric variation. Not categorical subtyping, not a severity ladder, not inferable from diagnosis alone. Cooperative neurodiversity here must be read with the canon's coupling boundary, not as a portfolio account.
 
-**What this makes possible.** Anchors the architectural claim once the DOI is live (status label flips, wording unchanged). Teaching module on architecture vs parameters. Model-comparison and registered-report designs in the 2027 testing phase.
+**What this makes possible.** Update the publication record if the manuscript is accepted and published. Teaching module on architecture vs parameters. Model-comparison and registered-report designs in the 2027 testing phase.
 
 **Typed links (all proposed, none approved):** develops PC7 -- the architectural-heterogeneity hypothesis as stated in Public Claim 7; develops PC11 -- robustness-fragility trade-offs across architectures; develops PC9 -- architecture as prior to calibration
 
@@ -1721,7 +1721,7 @@ Evidence type: conceptual model · Tags: EVO, NET, DEV, ND, METH
 - Toward an Emergent Paradigm for Neurodiversity and Health -- Autism in Adulthood (published) -- doi 10.1177/25739581261433443 -- develops: pc09, pc08, pc12
 - Regulatory Bandwidth: A Theoretical Integration of Present Multisystem Stress-Regulatory Capacity -- Psychoneuroendocrinology 192: 107955 (published) -- doi 10.1016/j.psyneuen.2026.107955 -- develops: pc13, pc01, pc05, pc04
 - Regulatory Capacity Is Not a Scalar: Metrics, Perturbations, and Viability in Network Physiology -- Frontiers in Network Physiology 6: 1961712 (published) -- doi 10.3389/fnetp.2026.1961712 -- develops: pc13, pc08, pc14
-- Beyond Parametric Variation: Neurodevelopmental Diversity as Architectural Heterogeneity in Biological Control Systems -- Biological Theory (in press (accepted Oct 2026)) -- develops: pc07, pc11, pc09
+- Beyond Parametric Variation: Neurodevelopmental Diversity as Architectural Heterogeneity in Biological Control Systems -- Biological Theory (manuscript in process) -- develops: pc07, pc11, pc09
 - From Evidence Hierarchies to Evidence Ecologies: Reframing Evidence-Based Medicine for Complexity, Multimorbidity, Neurodivergence, and Allostasis -- Center for Adaptive Stress white paper v1.0 (Zenodo) (published (not peer reviewed)) -- doi 10.5281/zenodo.21907022 -- develops: pc14, pc13
 - From Risk Architecture to Regulatory Architecture in Dementia Prevention -- Center for Adaptive Stress working paper v1.0 (Zenodo) (published (not peer reviewed)) -- doi 10.5281/zenodo.22755346 -- develops: pc02, pc14, pc04
 - The Evolutionary Stress Framework: A Field Guide (with the Canonical Terminology and Boundary Map and the 14 Core Claims) -- Zenodo (CAS library) (published 17 Oct 2026) -- doi 10.5281/zenodo.21937705 -- develops: all

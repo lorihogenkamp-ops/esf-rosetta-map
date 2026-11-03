@@ -1,5 +1,11 @@
 # Changelog
 
+## Publication-status correction -- 2026-11-03 (live map)
+
+- At the author's direction, *Beyond Parametric Variation* at *Biological Theory* is listed as **manuscript in process**. The manuscript is in revision; the earlier acceptance and in-press designations were incorrect.
+- Corrected the current source card, publication metadata and reading copy, including draft/publication wording. The record is a manuscript rather than a published peer-reviewed article.
+- Claim wording, evidence-status labels, source-to-claim relationships and review statuses are unchanged. Existing archived releases remain as deposited; this correction applies to the current working map.
+
 ## Live interface update -- 2026-11-03 (v2.0.0 research data)
 
 - Removed the global correction-release banner from normal map browsing.
