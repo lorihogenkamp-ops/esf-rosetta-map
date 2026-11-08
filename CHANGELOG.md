@@ -15,6 +15,12 @@
 - Current claim boundaries, evidence-status labels, link-review statuses, annotation-review warnings and counting rules remain visible and unchanged.
 - No research data, citations, claims, evidence relationships or review statuses were edited. The embedded data remain byte-for-byte identical to the v2.0.0 baseline. This interface update does not create a new dataset version or change any DOI or archived release.
 
+## Unreleased — proposed Jablonka annotation correction — 2026-10-31
+
+- Clarify `jablonka-2007`: authors' inheritance argument, ESF interpretation, and independently testable mechanisms are separated. Remove necessity claim for neurodevelopmental diversity and asserted stress-signature propagation.
+- Synchronize JSON, embedded HTML data and Markdown; preserve prior wording in `annotation_history`. Keep flagged/draft/proposed statuses and all historical links unchanged.
+- Review rationale and release controls: [reviews/jablonka-2007.md](reviews/jablonka-2007.md). v2.0.0 and its Zenodo DOI remain the archived baseline; this is an unreleased proposal, not a replacement deposit.
+
 ## v2.0.0 -- 2026-10-26 -- correction and canon alignment
 
 Zenodo version DOI: 10.5281/zenodo.23738421 · concept DOI: 10.5281/zenodo.23422796

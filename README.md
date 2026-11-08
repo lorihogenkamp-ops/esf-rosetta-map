@@ -1,5 +1,7 @@
 # The ESF Rosetta Stone Map
 
+> **Unreleased proposed correction (2026-10-31):** this review branch revises the Jablonka & Lamb card. Version 2.0.0 and its DOI below identify the archived baseline. See [the focused review](reviews/jablonka-2007.md) and [CHANGELOG.md](CHANGELOG.md). The card remains flagged; no relationship is approved.
+
 **An interdisciplinary evidence architecture for the Evolutionary Stress Framework (ESF)**
 Lori Hogenkamp · Center for Adaptive Stress · Version 2.0.0 · 2026-10-26 · CC BY 4.0
 Live map: https://lorihogenkamp-ops.github.io/esf-rosetta-map/ · Zenodo: https://doi.org/10.5281/zenodo.23738421 (this version) · https://doi.org/10.5281/zenodo.23422796 (all versions)
