@@ -1,5 +1,20 @@
 # Changelog
 
+## Publication-status correction -- 2026-11-03 (live map)
+
+- At the author's direction, *Beyond Parametric Variation* at *Biological Theory* is listed as **manuscript in process**. The manuscript is in revision; the earlier acceptance and in-press designations were incorrect.
+- Corrected the current source card, publication metadata and reading copy, including draft/publication wording. The record is a manuscript rather than a published peer-reviewed article.
+- Claim wording, evidence-status labels, source-to-claim relationships and review statuses are unchanged. Existing archived releases remain as deposited; this correction applies to the current working map.
+
+## Live interface update -- 2026-11-03 (v2.0.0 research data)
+
+- Removed the global correction-release banner from normal map browsing.
+- Sources and Claims remain the primary views. Version history & corrections is accessible from the sidebar and About panel, with links to the changelog, correction record and archived versions.
+- Earlier topics (v1.0) are reached through Version history & corrections rather than a primary Topics tab. Their original wording, status labels and links remain available as history.
+- Corrected source citations display normally. Previous citation wording, annotation revision notes and earlier topic assignments are preserved in expandable history sections; correction badges are no longer repeated on source cards.
+- Current claim boundaries, evidence-status labels, link-review statuses, annotation-review warnings and counting rules remain visible and unchanged.
+- No research data, citations, claims, evidence relationships or review statuses were edited. The embedded data remain byte-for-byte identical to the v2.0.0 baseline. This interface update does not create a new dataset version or change any DOI or archived release.
+
 ## Unreleased — proposed Jablonka annotation correction — 2026-10-31
 
 - Clarify `jablonka-2007`: authors' inheritance argument, ESF interpretation, and independently testable mechanisms are separated. Remove necessity claim for neurodevelopmental diversity and asserted stress-signature propagation.

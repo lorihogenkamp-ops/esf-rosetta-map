@@ -5028,8 +5028,8 @@
    "id": "hogenkamp-2026-beyond-parametric",
    "layer": 6,
    "annotated": true,
-   "citation": "Hogenkamp (in press) -- Beyond Parametric Variation",
-   "full": "Hogenkamp, Lori. In press. Beyond Parametric Variation: Neurodevelopmental Diversity as Architectural Heterogeneity in Biological Control Systems. Biological Theory.",
+   "citation": "Hogenkamp (manuscript in process) -- Beyond Parametric Variation",
+   "full": "Hogenkamp, Lori. Manuscript in process. Beyond Parametric Variation: Neurodevelopmental Diversity as Architectural Heterogeneity in Biological Control Systems. Biological Theory.",
    "doi": null,
    "tags": [
     "EVO",
@@ -5038,7 +5038,7 @@
     "ND",
     "METH"
    ],
-   "argues": "Proposes (active empirical hypothesis; in press at Biological Theory, accepted October 2026) that neurodevelopmental variation may include architectural heterogeneity -- differences in the structure, coupling, functional form, dimensionality, or timescale organization of the regulatory control system -- and is not exhausted by parametric heterogeneity, differences in the settings of a shared design. Identifies the conserved-architecture assumption in adaptive-calibration and robustness models, reads stress incoherence as architectural mismatch, and sets out empirical signatures that would discriminate the two kinds of variation.",
+   "argues": "Proposes (active empirical hypothesis; manuscript in process at Biological Theory) that neurodevelopmental variation may include architectural heterogeneity -- differences in the structure, coupling, functional form, dimensionality, or timescale organization of the regulatory control system -- and is not exhausted by parametric heterogeneity, differences in the settings of a shared design. Identifies the conserved-architecture assumption in adaptive-calibration and robustness models, reads stress incoherence as architectural mismatch, and sets out empirical signatures that would discriminate the two kinds of variation.",
    "esf": "The load-bearing claim of the framework, stated as a testable hypothesis. It is why the map treats heterogeneity as meaningful rather than noise, and why calibration (Layer 3) is never allowed to stand in for architecture. It also carries the cooperative-neurodiversity hypothesis into population-level reasoning in this layer.",
    "supports": [
     "Some variation is in system organization, not only in parameter settings on a shared model",
@@ -5046,18 +5046,18 @@
     "Different architectures yield different robustness-fragility profiles rather than positions on one scale"
    ],
    "limits": "Active empirical hypothesis: existing evidence motivates the distinction but does not yet discriminate architecture from flexible parametric variation. Not categorical subtyping, not a severity ladder, not inferable from diagnosis alone. Cooperative neurodiversity here must be read with the canon's coupling boundary, not as a portfolio account.",
-   "next": "Anchors the architectural claim once the DOI is live (status label flips, wording unchanged). Teaching module on architecture vs parameters. Model-comparison and registered-report designs in the 2027 testing phase.",
+   "next": "Update the publication record if the manuscript is accepted and published. Teaching module on architecture vs parameters. Model-comparison and registered-report designs in the 2027 testing phase.",
    "aliases": [],
    "draft": true,
    "related_versions": [],
    "evidence_type": "conceptual model",
    "evidence_type_status": "draft",
    "audit": {
-    "doi_identity": "pending (in press)",
+    "doi_identity": "pending (manuscript in process)",
     "metadata": "author-supplied",
-    "metadata_note": "Own publication; checked against the publisher record where a DOI exists.",
+    "metadata_note": "Author-supplied manuscript metadata; author confirmed the manuscript is in revision on 3 November 2026. Display status: manuscript in process.",
     "annotation": "draft",
-    "annotation_note": "First-pass annotation (17 Oct 2026) written from the published text; carries a 'develops' relation only, which is displayed and never counted as support.",
+    "annotation_note": "First-pass annotation (17 Oct 2026) of a manuscript in process; carries a 'develops' relation only, which is displayed and never counted as support.",
     "links": "draft"
    },
    "legacy_links": [],
@@ -5324,9 +5324,9 @@
    "authors": "Hogenkamp, L.",
    "venue": "Biological Theory",
    "year": 2026,
-   "status": "in press (accepted Oct 2026)",
+   "status": "manuscript in process",
    "doi": null,
-   "type": "peer-reviewed article",
+   "type": "manuscript",
    "develops": [
     "pc07",
     "pc11",
